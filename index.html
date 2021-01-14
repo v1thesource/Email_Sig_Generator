@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  text-decoration: underline;
+}
+</style>
+
+<body>
+
+<p>Alpes Lasers email signature generator!</p>
+
+Full Name <input type="text" value="Your name" id="my_name"> <br>
+Role <input type="text" value="Your role" id="my_role"> <br>
+Office phone <input type="text" value="Your office no." id="my_office_no"> <br>
+Mobile <input type="text" value="Your mobile" id="my_mobile"> <br>
+
+<script>
+function copyHTML() {
+  var copyText = document.getElementById("txt1");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999)
+  document.execCommand("copy");
+  alert("Copied the HTML code to your clipboard.");
+}
+</script>
+<script type="text/javascript">
+function showHTML() {
+    // ref textarea
+    textarea1 = document.getElementById('txt1');
+    // where to view HTML code
+    viewHtml = document.getElementById('div1');
+    // Finally get HTML output in div
+    viewHtml.innerHTML = textarea1.value ;
+}
+</script>
+<br>
+Signature preview <div id="div1" name="div1"
+ style="position:relative;width:500px;height:140px;border:1px solid
+ black;overflow:auto;"></div> <br>
+<!-- <input type="button" onclick="showHTML()" value="Ok" /> -->
+HTML Code <br> <textarea id="txt1" name="txt1" cols="50" rows="7"
+ onkeyup="showHTML()" style="position:relative;width:500px;height:100px;border:1px solid
+ red:;overflow:auto;text-overflow:"""></textarea>
+ <br>
+<button onclick="updateHTML()">Update Signature</button>
+<button onclick="copyHTML()">Copy HTML code</button>
+
+<script>
+default_text = '<table style="width:332.7pt;border-collapse:collapse" width="444" cellspacing="0" cellpadding="0" border="0"><tbody><tr style="height:1.0pt"><td style="width:158.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt" width="211" valign="top"><span style="font-size:6.0pt">&nbsp;</span></td><td colspan="2" style="width:58.5pt;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt" width="78" valign="top"><span style="font-size:3.0pt">&nbsp;</span></td><td colspan="2" style="width:116.2pt;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt" width="155" valign="top"><span style="font-size:3.0pt">&nbsp;</span></td></tr><tr style="height:31.2pt"><td style="width:158.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:31.2pt;text-align: right;" width="211" valign="top"><b><span style="font-family:&quot;Verdana&quot;,sans-serif;color:#262626;text-align: right;">Your name</span></b></span></b><span style="font-size:9.0pt;color:#404040"><br></span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#595959">Your role</span><span style="color:#595959"> </span></td><td style="width:12.75pt;border:none;border-right:solid #c00000 1.5pt;padding:0cm 5.4pt 0cm 5.4pt;height:31.2pt" width="17" valign="top"><span style="font-size:1.0pt">&nbsp;</span></td><td colspan="2" style="width:148.45pt;padding:0cm 5.4pt 0cm 5.4pt;height:31.2pt" width="198" valign="top"><a href="https://www.alpeslasers.ch/" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://www.alpeslasers.ch/&amp;source=gmail&amp;ust=1589643247849000&amp;usg=AFQjCNGWYt02H192dfIAkIIr_nUhDvFUSA"><span style="color:windowtext;text-decoration:none"><img style="width:.9583in;height:.3958in"src="data:image/png;base64,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"width="92"height="38"border="0" class="CToWUd"></span></a></td><td style="width:13.5pt;padding:0cm 0cm 0cm 0cm;height:31.2pt" width="18">&nbsp;</td></tr><tr style="height:13.45pt"><td style="text-align: right;;width:158.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:13.45pt;text-align: right;" width="211" valign="bottom"><span style="text-align: right;font-size:9.0pt;font-family:&quot;Verdana&quot;,sans-serif"><img style="width:.1145in;height:.1145in"src="data:image/gif;base64,R0lGODlhEAAQAPYAAP3398Y2OtZrb8Y1OvLR0vLOz+GUl8EjKMAgJdJcYfvw8e/GyMMsMcIoLdVpbcc6P8AiJ+Wgotl3etFbX8o/RfTW192Git2Chc9RVt+Mj/ru7+u2uMEkKe7DxPbf38xGS8c5Pvzz8/77+9hydvPS08ImK9JeYuKXmuGVmP77/Pnp6uOZm/TV1tRladl6ffrt7f34+Mk8QcUtM/jm5/Xb3MMqL96KjdZvcvz19slARcUvNMAhJsInLOy6vPjl5f///+KUl+alp8pEScQqMNdwc/XZ2vXc3f/9/SZFySZFySZFySZFySZFySZFySZFySZFySZFySZFySZFySZFySZFySZFySZFySZFySZFySZFySZFySZFySZFySZFySZFySZFySZFySZFySZFySZFySZFySZFySZFySZFySZFySZFySZFySZFySZFySZFySZFySZFySZFySZFySZFySZFySZFySZFySZFySZFySZFySZFySZFySZFySZFySZFySZFySZFySH5BAEAAEgALAAAAAAQABAAAAeUgD+Cg4SFhAACAwSGhEcFBjoIEy9HlZaVPws1JS07CBGWP5iiEgiSMQg7LEeil0cWpggXGDaUrpUbsT23rkYDCAMKt4UiI6Y0l62hRwSeEyKYrNKClSieBtA/KiskrIctqS4vAA8INT6jokUgsTw2PAgCId6WPqimNeAcu6LUPz45YpnQsQOINFcKIuTgcaMCsiOBAAA7AAAAAAAAAAA=" alt="Tel." width="11" height="11" border="0" class="CToWUd">Your office no.</span></td><td style="width:12.75pt;border:none;border-right:solid #c00000 1.5pt;padding:0cm 5.4pt 0cm 5.4pt;height:13.45pt" width="17" valign="bottom"><span style="text-align: right;font-size:9.0pt">&nbsp;</span></td><td colspan="2" style="width:148.45pt;padding:0cm 5.4pt 0cm 5.4pt;height:13.45pt" width="198" valign="bottom"><span style="font-size:9.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#595959"><a href="https://goo.gl/maps/7QPBFEfqnwtWH59S7" target="_blank"><span style="color:#000000;text-decoration:none">Avenue des Pâquiers 1</span></a></span></td><td style="width:13.5pt;padding:0cm 0cm 0cm 0cm;height:13.45pt" width="18">&nbsp;</td></tr><tr style="height:13.45pt"><td style="text-align: right;width:158.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:13.45pt" width="211" valign="bottom"><span style="text-align: right;font-size:9.0pt;font-family:&quot;Verdana&quot;,sans-serif"><img style="width:.1145in;height:.1145in" id="m_8129212393201633975Picture_x0020_2" src="data:image/gif;base64,R0lGODdhEAAQAPUAAPnq6stJTc5PVPz19s5VUM5TUM5TV/DKy/DLzMAgJcIxK9BsVdBrVMItKvLP0MtGS8ErKdR0XNR3X/HMzsQ5L/z18fLVyMAiJsQ3LsU/McU/MsQ1Ld+Ygum4pvnn6P///8pFSc5aUc5cUsxJTf339yZFySZFySZFySZFySZFySZFySZFySZFySZFySZFySZFySZFySZFySZFySZFySZFySZFySZFySZFySZFySZFySZFySZFySZFySZFySZFySZFySH5BAEAACUALAAAAAAQABAAAAZtwI9wSCwSAYJAoFBQGgZGRCIBYTAg08OHRDxAFpJImJHQFg+bCtFS5nbT2y1b696iK/V5XXgXcudFJHd5bXF8cHF6Q1yDfoqLjX9lhod4joWQCRsYGRkYCpNnUwkcHaMHdVweIBogBCGsI1BbQQA7AAAAAAAAAAA=" alt="Mobile" width="11" height="11" border="0" class="CToWUd">Your mobile</span></td><td style="width:12.75pt;border:none;border-right:solid #c00000 1.5pt;padding:0cm 5.4pt 0cm 5.4pt;height:13.45pt" width="17" valign="bottom"><span style="text-align: right;font-size:9.0pt">&nbsp;</span></td><td colspan="2" style="width:148.45pt;padding:0cm 5.4pt 0cm 5.4pt;height:13.45pt" width="198" valign="bottom"><span style="font-size:9.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#595959">2072, St-Blaise, Switzerland</span></td><td style="width:13.5pt;padding:0cm 0cm 0cm 0cm;height:13.45pt" width="18">&nbsp;</td></tr><tr style="height:15.6pt"><td style="text-align: right;width:158.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt" width="211" valign="bottom"><a href="https://www.linkedin.com/company/alpes-lasers-s-a-/" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://www.linkedin.com/company/alpes-lasers-s-a-/&amp;source=gmail&amp;ust=1589643247849000&amp;usg=AFQjCNHyuV0-a3pQ25PN5EIdjWIo4O6oaw"><span style="font-size:9.0pt;color:windowtext;text-decoration:none"><img style="width:.1666in;height:.1666in"src="data:image/gif;base64,R0lGODlhQABAAPEAAMAgJf///yZFySZFySH5BAEAAAIALAAAAABAAEAAAALdlAWpy+0PIzhH2otjzbxf44Uig4zmiabqyrbuC8fyTNcvBdoevukZ3/NJgEEhhJgzapDKIbO5BEKjuKmlas1qG9gVsqT4Jr7gk3ghJidN57BajWqP33D2000n24mkvH4kN+H3FxI4SLhzN0dYV6goaBjIEfm4KCVCeclV+fMoackD6MkJqZnIh0b6iZEZ6rD6MYq6OXtqWupKezspuwvaZZv7S/EAe9UrnFrb0Qqs7MuK7IwHHbu8aux0rUpqfYvdfby9TJ3MOw6dvbXO3u7+Dh8vHzfvVr9Yb75FUQAAOwAAAAAAAAAA" alt="LinkedIn" width="16" height="16" class="CToWUd"></span></a><span style="font-size:9.0pt"></span></td><td style="width:12.75pt;border:none;border-right:solid #c00000 1.5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt" width="17" valign="bottom"><br></td><td colspan="2" style="width:148.45pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt" width="198" valign="bottom"><span style="font-size:9.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#c00000"><a href="https://www.alpeslasers.ch" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://www.alpeslasers.ch&amp;source=gmail&amp;ust=1589643247849000&amp;usg=AFQjCNHVZ3zjlCrGDszI7MtWzxRze4FUFA"><span style="color:#c00000;text-decoration:none">www.alpeslasers.ch</span></a></span></td><td style="width:13.5pt;;height:15.6pt"width="18">&nbsp;</td></tr><tr><td style="width:158.0pt;"width="211"><br></td><td style="width:12.75pt;" width="17"><br></td><td style="width:45.75pt;" width="61"><br></td><td style="width:102.7pt;"width="137"><br></td><td style="width:13.5pt;" width="18"><br></td></tr></tbody></table>';
+function updateHTML() {
+	txt1.value = default_text;
+    var str = txt1.value;
+    var str = str.replace("Your name", my_name.value);
+    var str = str.replace("Your role", my_role.value);
+    var str = str.replace("Your office no.", my_office_no.value);
+    var str = str.replace("Your mobile", my_mobile.value);
+    txt1.value = str;
+    showHTML();
+}
+</script>
+
+</body>
+</html>
